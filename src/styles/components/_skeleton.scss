@@ -1,0 +1,54 @@
+.imageSkeleton {
+  width: 100%;
+  max-width: 1150px;
+  margin-top: 57px;
+  columns: 1;
+  column-gap: 24px;
+  gap: 24px;
+
+  &-box {
+    opacity: 0.7;
+    width: 100%;
+    max-width: 270px;
+    margin-inline: auto;
+    transition: height 1s ease;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    break-inside: avoid;
+    animation: pulse 1s linear infinite alternate;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .imageSkeleton {
+    columns: 2;
+  }
+}
+@media screen and (min-width: 519px) {
+  .imageSkeleton {
+    columns: 2;
+  }
+}
+@media screen and (min-width: 690px) {
+  .imageSkeleton {
+    columns: 3;
+  }
+}
+@media screen and (min-width: 885px) {
+  .imageSkeleton {
+    columns: 4;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .imageSkeleton {
+    columns: 4;
+  }
+}
+@keyframes pulse {
+  0% {
+    background-color: hsl(19, 15%, 38%, 60%);
+  }
+  100% {
+    background-color: hsl(19, 15%, 38%, 95%);
+  }
+}
