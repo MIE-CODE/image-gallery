@@ -6,6 +6,7 @@ type Props = {
   prevPage: string | null;
   nextPage: string | null;
 };
+
 export default function Footer({ topic, page, prevPage, nextPage }: Props) {
   if (!prevPage && !nextPage) return;
   const pageNums: number[] = [];
