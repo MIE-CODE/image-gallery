@@ -9,9 +9,9 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Galleria - home",
+  title: "Gallerium - home",
   description:
-    "Discover Galleria, the ultimate platform for showcasing and organizing your images with ease. Enjoy drag-and-drop uploads, real-time updates, and a visually stunning experience.",
+    "Discover Gallerium, the ultimate platform for showcasing and organizing your images with ease. Enjoy drag-and-drop uploads, real-time updates, and a visually stunning experience.",
 };
 
 export default function RootLayout({
@@ -29,7 +29,7 @@ export default function RootLayout({
         <meta name="author" content="MIE - TECH" />
         <meta
           property="og:title"
-          content="Galleria - Your Dynamic Image Gallery"
+          content="Gallerium - Your Dynamic Image Gallery"
         />
       </Head>
       <body className={lora.className}>{children}</body>
