@@ -27,8 +27,8 @@ export const NavList = () => {
   const linkStyle = (path: string) => (router === path ? "active" : "");
   return (
     <>
-      <li className={`navlist__a ${linkStyle("/")}`}>
-        <Link href="/">Home</Link>
+      <li className={`navlist__a ${linkStyle("/home")}`}>
+        <Link href="/home">Home</Link>
       </li>
       <li className={`navlist__a ${linkStyle("/gallery")}`}>
         <Link href="/gallery">Gallery</Link>

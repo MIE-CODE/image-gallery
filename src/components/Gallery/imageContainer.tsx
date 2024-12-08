@@ -65,7 +65,10 @@ export default function ImageContainer({ photo }: Props) {
         </div>
       </div>
 
-      {photo.photographer}
+      <div className="gallery-avatar-cont">
+        <div className="gallery-avatar"></div>
+        <p>{photo.photographer}</p>
+      </div>
     </div>
   );
 }
