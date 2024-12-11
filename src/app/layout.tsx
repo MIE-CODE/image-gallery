@@ -9,7 +9,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Gallerium - home",
+  title: "Gallarium",
   description:
     "Discover Gallerium, the ultimate platform for showcasing and organizing your images with ease. Enjoy drag-and-drop uploads, real-time updates, and a visually stunning experience.",
 };

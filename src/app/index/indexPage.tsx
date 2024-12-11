@@ -5,23 +5,6 @@ import fashionLady from "../../../public/images/fashion_lady.png";
 import Link from "next/link";
 
 export default function IndexPage() {
-  const masonryItems = [
-    {
-      width: 120,
-      height: 120,
-      header: "What make us special",
-      bodyText:
-        "Lorem ipsum dolor sit amet consectetur. Gravida tellus ut consequat odio dui commodo sit scelerisque pellentesque. Risus pretium tortor sed consequat nisl massa. Id dolor in dolor vitae feugiat blandit sagittis egestas. Tincidunt elit sit curabitur nunc nibh aliquam in lectus.",
-    },
-
-    { width: 400, height: 315 },
-    { width: 224, height: 219 },
-    { width: 224, height: 219 },
-    { width: 224, height: 219 },
-    { width: 188, height: 155 },
-    { width: 400, height: 315 },
-    { width: 188, height: 155 },
-  ];
   return (
     <>
       <div className="ip-banner">
@@ -64,31 +47,33 @@ export default function IndexPage() {
         </div>
 
         <div className="ip-about-masonry">
-          {masonryItems.map((item, i) => {
-            const widthHeightRatio = item.height / item.width;
-            const galleryHeight = Math.ceil(item.height * widthHeightRatio);
-            const photoRowspan = Math.ceil(galleryHeight / 25) + 3;
-
-            return (
-              <div
-                style={{
-                  width: `${item.width}px`,
-                  height: `${galleryHeight}px`,
-                  gridRow: `span ${photoRowspan}`,
-                  gridColumn: `span ${photoRowspan}`,
-                }}
-                className="ip-about-masonry-item"
-                key={i}
-              >
-                {item.header && <div>{item.header}</div>}
-                {item.bodyText && (
-                  <div>
-                    {item.bodyText} <Link href="#">see more</Link>
-                  </div>
-                )}
+          <div className="ip-about-masonry-subtext">
+            <p className="ip-about-masonry-subtext-md">What make us special</p>
+            <p className="ip-about-masonry-subtext-sm">
+              Lorem ipsum dolor sit amet consectetur. Gravida tellus ut
+              consequat odio dui commodo sit scelerisque pellentesque. Risus
+              pretium tortor sed consequat nisl massa. Id dolor in dolor vitae
+              feugiat blandit sagittis egestas. Tincidunt elit sit curabitur
+              nunc nibh aliquam in lectus.{" "}
+              <Link className="ip-about-masonry-subtext-link" href={"#"}>
+                see more
+              </Link>
+            </p>
+          </div>
+          <div className="wrapper">
+            <div className="wrapper-left"></div>
+            <div className="cont">
+              <div className="flex">
+                <div className="box0"></div>
+                <div className="box1"></div>
               </div>
-            );
-          })}
+              <div className="flex">
+                <div className="box2"></div>
+                <div className="box3"></div>
+              </div>
+            </div>
+            <div className="wrapper-right"></div>
+          </div>
         </div>
       </div>
       <div className="ip-fc"></div>
