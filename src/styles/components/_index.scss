@@ -135,6 +135,24 @@
       }
     }
   }
+  &-fc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 158px;
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      &-md {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 500;
+        color: #b7b7b7;
+      }
+    }
+  }
 }
 
 .box0 {

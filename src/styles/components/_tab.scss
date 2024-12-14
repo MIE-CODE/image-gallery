@@ -1,0 +1,48 @@
+.tab {
+  &-content {
+    margin: 40px 0px;
+    animation: moving 0.5s ease;
+  }
+  &-actions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-width: 1152px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 40px;
+    border-bottom: 2px solid #d9d9d9;
+    position: relative;
+    &-btn {
+      cursor: pointer;
+      padding: 10px;
+      background-color: transparent;
+      color: #705c53;
+      font-weight: 400;
+      font-size: 20px;
+      transition: color 0.3s ease-in-out;
+      &.active {
+        color: #353535;
+      }
+    }
+    &-line {
+      bottom: -2px;
+      border-radius: 10px;
+      position: absolute;
+      height: 2px;
+      background-color: #353535;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+@keyframes moving {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
