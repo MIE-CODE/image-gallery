@@ -36,8 +36,8 @@ export const Tab: React.FC<TabProps> = ({ children }) => {
           className="tab-actions-line"
         ></div>
       </div>
-
       <div className="tab-content">{children[activeTab]}</div>
+      <div className="tab-line"></div>
     </div>
   );
 };

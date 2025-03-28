@@ -1,0 +1,44 @@
+.carousel {
+  // max-width: 1150px;
+  margin: 0px auto;
+  scrollbar-width: none;
+  scroll-padding: 0px 24px;
+
+  &.bottommargin {
+    margin-bottom: 24px;
+  }
+  &.paddingbottom {
+    padding-bottom: 40px;
+  }
+  &-inner {
+    transform: translate(0px);
+    flex-wrap: wrap;
+    display: flex;
+    gap: 24px;
+  }
+  &-item {
+    min-width: 350px;
+    height: 248px;
+    border: 1px solid black;
+  }
+}
+.carousel[data-animated="true"] {
+  overflow: hidden;
+}
+.carousel[data-animated="true"] .carousel-inner {
+  width: fit-content;
+  flex-wrap: nowrap;
+
+  &.fw {
+    animation: slide 400s reverse linear infinite;
+  }
+  &.bw {
+    animation: slide 400s linear infinite;
+  }
+}
+
+@keyframes slide {
+  to {
+    transform: translate(-50%);
+  }
+}

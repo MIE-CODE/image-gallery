@@ -4,6 +4,7 @@ import workLady from "../../../public/images/work_lady.png";
 import fashionLady from "../../../public/images/fashion_lady.png";
 import Link from "next/link";
 import { Tab, TabPanel } from "@/components/tab/Customtab";
+import { Slider } from "@/components/slider/slider";
 import { Carousel } from "@/components/carousel/carousel";
 
 export default function IndexPage() {
@@ -32,9 +33,24 @@ export default function IndexPage() {
           <button className="ip-explore-cont-l__button">Get started</button>
         </div>
         <div className="ip-explore-cont-r">
-          <Image src={cityBoy} alt="city boy" width={270} />
-          <Image src={workLady} alt="city boy" width={270} />
-          <Image src={fashionLady} alt="city boy" width={270} />
+          <Image
+            className="ip-explore-cont-r-image"
+            src={cityBoy}
+            alt="city boy"
+            width={270}
+          />
+          <Image
+            className="ip-explore-cont-r-image animated"
+            src={workLady}
+            alt="city boy"
+            width={270}
+          />
+          <Image
+            className="ip-explore-cont-r-image animated"
+            src={fashionLady}
+            alt="city boy"
+            width={270}
+          />
         </div>
       </div>
       <div className="ip-about">
@@ -84,41 +100,38 @@ export default function IndexPage() {
         </div>
         <Tab>
           <TabPanel title="Nature">
-            <div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-              voluptates corrupti corporis repudiandae nostrum sed consectetur
-              modi voluptatum velit quam sunt asperiores error, rerum repellat
-              quae exercitationem, odit expedita id, accusamus labore excepturi!
-              Qui dolores, quidem consequatur similique iure rerum?
-            </div>
+            <Slider title="Nature" mb />
+            <Slider title="Nature" backwards border />
           </TabPanel>
           <TabPanel title="Portraits">
-            <div>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
-              soluta temporibus dolor totam illo impedit similique quod
-              veritatis? Velit perferendis distinctio, iure aperiam nisi
-              molestiae similique commodi voluptatum, dolore iusto excepturi
-              sapiente nostrum accusamus. Perferendis doloremque odit deserunt
-              sunt laboriosam.
-            </div>
+            <Slider title="Portraits" backwards mb />
+            <Slider title="Portraits" border />
           </TabPanel>
           <TabPanel title="Event">
-            <div>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
-              ssamus. Perferendis doloremque odit deserunt sunt laboriosam.
-            </div>
+            <Slider title="Event" mb />
+            <Slider title="Event" backwards border />
           </TabPanel>
           <TabPanel title="Abstract">
-            <div>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
-              ssamus. Perferendis doloremque odit deserunt sunt laboriosam.
-            </div>
+            <Slider title="Abstract" backwards mb />
+            <Slider title="Abstract" border />
           </TabPanel>
-          <TabPanel title="culture">
-            <Carousel title="culture" />
-            <Carousel title="culture" />
+          <TabPanel title="Culture">
+            <Slider title="culture" mb />
+            <Slider title="culture" backwards border />
           </TabPanel>
         </Tab>
+      </div>
+      <div className="ip-spotlight">
+        <div className="ip-spotlight-text">
+          <p className="ip-spotlight-text-md">Photographer,s Spotlight</p>
+          <p className="ip-spotlight-text-sm">Meet the Artists</p>
+        </div>
+        <div>
+          <Carousel>
+            <div>hey</div>
+            <div>hey</div>
+          </Carousel>
+        </div>
       </div>
     </>
   );

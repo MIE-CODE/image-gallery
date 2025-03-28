@@ -1,9 +1,9 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 
 interface CarouselProps {
-  title: string;
+  children: PropsWithChildren<unknown>;
 }
 
-export const Carousel: React.FC<CarouselProps> = () => {
-  return <div>carousel</div>;
+export const Carousel = (props: PropsWithChildren<CarouselProps>) => {
+  return <div>{props.children} </div>;
 };

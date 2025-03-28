@@ -1,13 +1,13 @@
 .tab {
   &-content {
-    margin: 40px 0px;
+    padding: 40px 0px;
     animation: moving 0.5s ease;
   }
   &-actions {
     width: 100%;
     display: flex;
     justify-content: center;
-    max-width: 1152px;
+    max-width: 1150px;
     margin-left: auto;
     margin-right: auto;
     gap: 40px;
@@ -33,6 +33,13 @@
       background-color: #353535;
       transition: all 0.3s ease-in-out;
     }
+  }
+  &-line {
+    max-width: 1152px;
+    margin: 0px auto;
+    height: 1px;
+    margin-bottom: 42.01px;
+    background-color: #d9d9d9;
   }
 }
 
